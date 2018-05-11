@@ -1,0 +1,12 @@
+---
+# tasks file for ansible-role-mysql/
+- name: install mysql server
+  apt:
+    name:   mysql-server
+    state:  latest
+
+- name: mysql service state
+  service:
+    name:     mysql
+    state:    started
+    enabled:  yes
